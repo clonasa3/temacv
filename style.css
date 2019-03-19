@@ -1,0 +1,573 @@
+/*
+Theme Name: Mi CV
+Theme URI:
+Author: Pol Clota Ortiz
+Author URI:
+Description: Tema para curriculum vitae
+Version: 1.0
+License: GNU General Public License v2 or Later
+License URI:
+Tags: cv,curriculium,curriculum vitae,profile,perfil
+Text Domain: temacv
+*/
+html{
+    box-sizing: border-box;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+.clear{
+    clear: both;
+}
+header{
+    position: relative;
+}
+header.encabezado-sitio{
+    border-bottom: 1px solid grey;
+}
+
+body{
+    color: black;
+}
+p{
+    font-family: "Nixie One",cursive;
+}
+p strong{
+    font-family: 'Quicksand', sans-serif;
+}
+.btn{
+    font-family: "Nixie One",cursive;
+}
+h2.titol2{
+    margin-top: 30px;
+}
+div.logo{
+    float: none;
+    padding: 20px 0;
+    width: 100%;
+    align-content: center;
+    text-align: center;
+}
+@media only screen and (min-width:768px){
+    header.encabezado-sitio .contenedor{
+        position: relative;
+    }
+    .navegacion{
+        position: absolute;
+    }
+    div.logo{
+        float: left;
+        padding: 20px 0;
+        width: 10%;
+    }
+}
+nav.menu-sitio{
+    display: none;
+}
+
+nav.menu-sitio ul{
+    list-style: none;
+    display: table;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+@media only screen and (min-width:768px){
+    nav.menu-sitio{
+        display: block;
+        position: fixed;
+        width: 100%;
+        z-index: 20;;
+        background-color:rgba(255, 255, 255, 0.700);
+    }
+    nav.menu-sitio ul{
+        width: 90%;
+    }
+
+}
+
+nav.menu-sitio ul li a{
+    text-align: center;
+    padding: 20px 0;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+}
+nav.menu-sitio ul li:hover{
+    background-color:hsla(224, 72%, 55%, 0.521);;
+}
+nav.menu-sitio ul li.current_page_item{
+    border-bottom: 3px solid hsla(224, 72%, 55%, 0.521);
+}
+
+
+.text-top-animat h1{
+    text-align: center;
+    background-color: white;
+    text-transform: uppercase;
+    padding: 7px;
+}
+
+@media only screen and (min-width:768px){
+    nav.menu-sitio ul li{
+        display: table-cell;
+        width: 5%;  
+    }
+    .imatge-slide{
+        /*background-color: hsla(261, 37%, 52%, 0.521);*/
+        height: 500px;
+        background-position: top;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+    .text-top-animat{
+        position: absolute;
+        top: 47%;
+        text-align: center;
+    }
+}
+@media only screen and (max-width:767px){
+    .imatge-slide{
+        background-image: none;
+        margin-bottom: 50px;
+    }
+}
+
+/*Estils del menu repositiu */
+@media only screen and (max-width:767px){
+
+    nav.menu-sitio ul li.current_page_item{
+        border-bottom: 3px solid white;
+    }
+    nav.menu-sitio ul li a{
+        background-color: #64bef7;
+    }
+    .mobile-menu a{
+        height: 40px;
+        background-color:#0095f1;
+        width: 100%;
+        color:white;
+        display: block;
+        text-align: center;
+        line-height: 40px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+}
+@media only screen and (min-width:768px){
+    .mobile-menu a{
+        display: none;
+    }
+}
+.col-md-8.text-informacio{
+    margin: auto;
+}
+
+.historia-contenidor .foto-perfil img{
+    display: block;
+    margin: 0 auto;
+}
+
+@media only screen and (min-width:768px){
+    .historia-contenidor .foto-perfil img{
+        display: block;
+        margin: 0;
+    }
+}
+
+/**Caixa dades personals */
+.historia-contenidor{
+    margin-top:3%;
+    margin-bottom: 3%;
+}
+
+
+
+.historia-contenidor h2{
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.historia-contenidor hr{
+    border-top: 2px solid black;
+}
+
+/***** RESPONSIVE TEXT INFO**/
+.historia-contenidor .text-informacio .intern-info{
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    float: none;
+    margin-top:3%;
+}
+@media only screen and (min-width:768px){
+    .historia-contenidor .text-informacio .intern-info{
+        width: 50%;
+        font-size: 20px;
+        text-align: right;
+        float: right;
+        margin-top:3%;
+    }
+}
+
+.historia-contenidor .text-informacio p span{
+    font-weight: 600;
+}
+
+.historia-contenidor .foto-perfil{
+    
+}
+
+/*Movil Estudis*/
+.estudis{
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 400px;
+}
+.estudi  h2{
+    font-family: 'Poiret One', cursive;
+}
+.estudi{
+    width: 100%;
+}
+.estudi .text-informacio{
+    font-family: 'Nixie One', cursive;
+}
+@media only screen and (min-width:768px){
+    .mobile-menu a{
+        display: none;
+    }
+    
+    .estudis{
+        overflow-x: auto;
+        overflow-y: hidden;
+        width: 96%;
+        max-height: none;
+    }
+
+    .estudis-contenidor .fila-estudis{
+        display: table;
+        
+        margin-bottom: 2%;
+    
+    }
+
+    .estudis-contenidor .fila-estudis .estudi{
+        display: table-cell;
+        min-width: 300px;
+        max-width: 400px;
+        border: 1px solid;
+    
+    }
+
+    .estudis-contenidor .fila-estudis .estudi h2{
+        text-align: center;
+        padding: 1%;
+    }
+    .col-md-12.text-informacio {
+
+        min-height: 200px;
+    
+    }
+    .buto-titol{
+        display: block;
+        margin: 0 auto;
+        width: 50%;
+        margin-bottom: 2%;
+        margin-top: 2%;
+    }
+    .boto-certificat{
+        border-top: 0;
+    }
+
+}
+
+
+/*Fila de Feina */
+.feina-contenidor{
+    position: relative;
+    margin-top: 3%;
+}
+.fila-feina {
+    padding: 5%;
+}
+.fila-feina::after {
+    position: absolute;;
+    background-color: rgba(255, 245, 245,0.6);
+    width: 100%;
+    height: 100%;
+    content: '';
+    top:0;
+    left: 0;
+}
+.data-feina h2{
+    font-family:'Fredericka the Great', cursive;
+
+}
+.text-informacio p strong{
+    text-transform: uppercase;
+    font-family: 'Quicksand', sans-serif;
+}
+.caixa-feina-interior-text{
+    border-left: 1px solid #929292
+}
+.caixa-feina-interior-data{
+    text-align: right;
+}
+/*HERO VIDA SECTION LABORLA */
+
+.hero-image {
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    z-index: 2;
+    position: relative;
+}
+
+/** Caixes Coniexmanet **/
+.titol-skill{
+    text-align: center;
+}
+.cos-skill .icono-skill img{
+    position: absolute;
+    left: 22%;
+    top: 17%;
+}
+.cos-skill p{
+    text-align: center;
+}
+
+/** TYPEWRITTER**/
+.typewriter h1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+    font-weight: bold;
+    color: white;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+
+  section .titol2{
+    font-family: 'Fredericka the Great', cursive;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .intern-info span{
+    font-family: 'Poiret One', cursive;
+  }
+  .intern-info p{
+    font-family: 'Quicksand', sans-serif;
+  }
+  .hero-text h1{
+      font-family: 'Fredericka the Great', cursive;
+  }
+.hero-text p{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bolder;
+    font-size: 21px;
+}
+
+
+/** PROGRESSBAR CIRCULARS **/
+
+.progress{
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    background: none;
+    margin: 0 auto;
+    box-shadow: none;
+    position: relative;
+}
+.progress:after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 12px solid #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.progress > span{
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+.progress .progress-left{
+    left: 0;
+}
+.progress .progress-bar{
+    width: 100%;
+    height: 100%;
+    background: none;
+    border-width: 12px;
+    border-style: solid;
+    position: absolute;
+    top: 0;
+}
+.progress .progress-left .progress-bar{
+    left: 100%;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+    border-left: 0;
+    -webkit-transform-origin: center left;
+    transform-origin: center left;
+}
+.progress .progress-right{
+    right: 0;
+}
+.progress .progress-right .progress-bar{
+    left: -100%;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+    border-right: 0;
+    -webkit-transform-origin: center right;
+    transform-origin: center right;
+    animation: loading-1 1.8s linear forwards;
+}
+.progress .progress-value{
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+   /* background: #44484b;*/
+    font-size: 24px;
+    color: #fff;
+    line-height: 135px;
+    text-align: center;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+.progress.blue .progress-bar{
+    border-color: #049dff;
+}
+.progress.blue .progress-left .progress-bar{
+    animation: loading-2 1.5s linear forwards 1.8s;
+}
+.progress.yellow .progress-bar{
+    border-color: #fdba04;
+}
+.progress.yellow .progress-left .progress-bar{
+    animation: loading-3 1s linear forwards 1.8s;
+}
+.progress.pink .progress-bar{
+    border-color: #ed687c;
+}
+.progress.pink .progress-left .progress-bar{
+    animation: loading-4 0.4s linear forwards 1.8s;
+}
+.progress.green .progress-bar{
+    border-color: #1abc9c;
+}
+.progress.green .progress-left .progress-bar{
+    animation: loading-5 1.2s linear forwards 1.8s;
+}
+@keyframes loading-1{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+}
+@keyframes loading-2{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(144deg);
+        transform: rotate(144deg);
+    }
+}
+@keyframes loading-3{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+}
+@keyframes loading-4{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(36deg);
+        transform: rotate(36deg);
+    }
+}
+@keyframes loading-5{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(126deg);
+        transform: rotate(126deg);
+    }
+}
+/* Buto Projectes*/
+
+.btn-projectes{
+    display: block;
+    margin: 0 auto;
+}
+
+/* APTITUDS */
+.llista-aptituds{
+    margin: 0 auto;
+}
+.llista-aptituds ul{
+    margin-top: 10px;
+}
+.llista-aptituds ul li{
+    padding-top: 10px;
+}
+
+/**Footer*/
+.footer{
+position: absolute;
+width: 100%;
+background-color:rgba(194, 199, 203,0.6);
+color: black;
+text-align: center;
+font-family: 'Quicksand', sans-serif;
+}
