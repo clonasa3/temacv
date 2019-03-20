@@ -569,5 +569,15 @@ width: 100%;
 background-color:rgba(194, 199, 203,0.6);
 color: black;
 text-align: center;
+font-size: 20px;
+font-weight: bold;
+min-height: 15em;
+border-top: black;
 font-family: 'Quicksand', sans-serif;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 15em;
 }
